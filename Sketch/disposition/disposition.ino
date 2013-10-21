@@ -15,11 +15,11 @@ int redPin = 11;      // The Pin that will be choosing the red color
 int greenPin = 5;    // The Pin that will be choosing the green color
 int bluePin = 3;     // The Pin that will be choosing the blue color
 
-int redBrightness = 100;  // The value that will determine the brightness of the red color
-int greenBrightness = 100; // The value that will determine the brightness of the green color
-int blueBrightness = 100; // The value that will determine the brightenss of the blue color
+byte redBrightness = 100;  // The value that will determine the brightness of the red color
+byte greenBrightness = 100; // The value that will determine the brightness of the green color
+byte blueBrightness = 100; // The value that will determine the brightenss of the blue color
 
-int baudRate = 115200;
+int baudRate = 9600;
 
 //////////////
 // Fields
@@ -47,22 +47,16 @@ void setup()  {
 // the loop routine runs over and over again forever:
 void loop()  { 
 
-  if(Serial.available() > 0)
+  if(Serial.available() == 3)
   {    
-    // Parse out the data from the computer
-    for(int x=0; x<protocolLength; x++)
-    {
-      receivedMessage[x] = Serial.read();
-    }
-
     // Set the Brightness of the Red
-    int redBrightness = receivedMessage[0];
+    int redBrightness = Serial.read();
     
     // Set the Brightness of the Green
-    int greenBrightness = receivedMessage[1];
+    int greenBrightness = Serial.read();
     
     // Set the Brightness of the Blue
-    int blueBrightness = receivedMessage[2];
+    int blueBrightness = Serial.read();
   }
 
   // Set the Dioder to the specified color

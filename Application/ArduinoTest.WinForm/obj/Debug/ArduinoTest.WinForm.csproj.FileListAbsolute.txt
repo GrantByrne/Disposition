@@ -1,0 +1,11 @@
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.WinForm\bin\Debug\ArduinoTest.WinForm.exe.config
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.WinForm\bin\Debug\ArduinoTest.WinForm.exe
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.WinForm\bin\Debug\ArduinoTest.WinForm.pdb
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.WinForm\bin\Debug\ArduinoTest.Components.dll
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.WinForm\bin\Debug\ArduinoTest.Components.pdb
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.WinForm\obj\Debug\ArduinoTest.WinForm.csprojResolveAssemblyReference.cache
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.WinForm\obj\Debug\ArduinoTest.WinForm.Form1.resources
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.WinForm\obj\Debug\ArduinoTest.WinForm.Properties.Resources.resources
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.WinForm\obj\Debug\ArduinoTest.WinForm.csproj.GenerateResource.Cache
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.WinForm\obj\Debug\ArduinoTest.WinForm.exe
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.WinForm\obj\Debug\ArduinoTest.WinForm.pdb

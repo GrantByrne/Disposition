@@ -1,0 +1,5 @@
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\obj\Debug\ArduinoTest.Components.csprojResolveAssemblyReference.cache
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\bin\Debug\ArduinoTest.Components.dll
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\bin\Debug\ArduinoTest.Components.pdb
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\obj\Debug\ArduinoTest.Components.dll
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\obj\Debug\ArduinoTest.Components.pdb
