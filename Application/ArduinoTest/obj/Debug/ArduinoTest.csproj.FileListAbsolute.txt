@@ -1,0 +1,9 @@
+c:\users\grant\documents\visual studio 2012\Projects\ArduinoTest\ArduinoTest\bin\Debug\ArduinoTest.exe.config
+c:\users\grant\documents\visual studio 2012\Projects\ArduinoTest\ArduinoTest\bin\Debug\ArduinoTest.exe
+c:\users\grant\documents\visual studio 2012\Projects\ArduinoTest\ArduinoTest\bin\Debug\ArduinoTest.pdb
+c:\users\grant\documents\visual studio 2012\Projects\ArduinoTest\ArduinoTest\obj\Debug\ArduinoTest.csprojResolveAssemblyReference.cache
+c:\users\grant\documents\visual studio 2012\Projects\ArduinoTest\ArduinoTest\obj\Debug\ArduinoTest.exe
+c:\users\grant\documents\visual studio 2012\Projects\ArduinoTest\ArduinoTest\obj\Debug\ArduinoTest.pdb
+H:\Backup\SSD Just in Case\Documents\Visual Studio 2012\Projects\ArduinoTest\ArduinoTest\bin\Debug\ArduinoTest.exe.config
+H:\Backup\SSD Just in Case\Documents\Visual Studio 2012\Projects\ArduinoTest\ArduinoTest\obj\Debug\ArduinoTest.exe
+H:\Backup\SSD Just in Case\Documents\Visual Studio 2012\Projects\ArduinoTest\ArduinoTest\obj\Debug\ArduinoTest.pdb
