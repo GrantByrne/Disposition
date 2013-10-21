@@ -12,6 +12,8 @@ namespace ArduinoTest.Components
     public class ScreenColorManager : IScreenColorManager
     {
 
+        private static Bitmap _screenPixel = new Bitmap(1, 1);
+
         [DllImport("gdi32.dll", CharSet = CharSet.Auto, SetLastError = true, ExactSpelling = true)]
         public static extern int BitBlt(IntPtr hDc, int x, int y, int nWidth, int nHeight, IntPtr hSrcDc, int xSrc, int ySrc, int dwRop);
 
@@ -21,24 +23,28 @@ namespace ArduinoTest.Components
         /// <returns></returns>
         public Color GetCenterScreenColor()
         {            
-            //global scope
-            var screenPixel = new Bitmap(1, 1);
 
             //method to test
-            using (var gdest = Graphics.FromImage(screenPixel))
+            using (var gdest = Graphics.FromImage(_screenPixel))
             {
                 using (var gsrc = Graphics.FromHwnd(IntPtr.Zero))
                 {
-                    var hSrcDc = gsrc.GetHdc();
-                    var hDc = gdest.GetHdc();
-                    BitBlt(hDc, 0, 0, 1, 1, hSrcDc, 500, 540, (int) CopyPixelOperation.SourceCopy);
-                    gdest.ReleaseHdc();
-                    gsrc.ReleaseHdc();
+                    try
+                    {
+                        var hSrcDc = gsrc.GetHdc();
+                        var hDc = gdest.GetHdc();
+                        BitBlt(hDc, 0, 0, 1, 1, hSrcDc, 500, 540, (int)CopyPixelOperation.SourceCopy);
+                        gdest.ReleaseHdc();
+                        gsrc.ReleaseHdc();
+                    }
+                    catch (Exception ex)
+                    {
 
+                    }
                 }
             }
 
-            return MapColor(screenPixel.GetPixel(0, 0));
+            return MapColor(_screenPixel.GetPixel(0, 0));
         }
 
         /// <summary>
