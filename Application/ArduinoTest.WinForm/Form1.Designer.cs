@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.RedTextBox = new System.Windows.Forms.TextBox();
             this.BlueTextBox = new System.Windows.Forms.TextBox();
             this.GreenTextBox = new System.Windows.Forms.TextBox();
@@ -35,6 +36,7 @@
             this.RedLabel = new System.Windows.Forms.Label();
             this.BlueLabel = new System.Windows.Forms.Label();
             this.GreenLabel = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // RedTextBox
@@ -98,6 +100,12 @@
             this.GreenLabel.TabIndex = 6;
             this.GreenLabel.Text = "Green";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 25;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,6 +134,7 @@
         private System.Windows.Forms.Label RedLabel;
         private System.Windows.Forms.Label BlueLabel;
         private System.Windows.Forms.Label GreenLabel;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

@@ -11,9 +11,9 @@
 // Settings
 //////////////
 
-int redPin = 11;      // The Pin that will be choosing the red color
-int greenPin = 5;    // The Pin that will be choosing the green color
-int bluePin = 3;     // The Pin that will be choosing the blue color
+int redPin = 5;      // The Pin that will be choosing the red color
+int greenPin = 3;    // The Pin that will be choosing the green color
+int bluePin = 11;     // The Pin that will be choosing the blue color
 
 byte redBrightness = 100;  // The value that will determine the brightness of the red color
 byte greenBrightness = 100; // The value that will determine the brightness of the green color
@@ -50,13 +50,13 @@ void loop()  {
   if(Serial.available() == 3)
   {    
     // Set the Brightness of the Red
-    int redBrightness = Serial.read();
+    redBrightness = Serial.read();
     
     // Set the Brightness of the Green
-    int greenBrightness = Serial.read();
+    greenBrightness = Serial.read();
     
     // Set the Brightness of the Blue
-    int blueBrightness = Serial.read();
+    blueBrightness = Serial.read();
   }
 
   // Set the Dioder to the specified color

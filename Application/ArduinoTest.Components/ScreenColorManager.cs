@@ -20,7 +20,7 @@ namespace ArduinoTest.Components
         /// </summary>
         /// <returns></returns>
         public Color GetCenterScreenColor()
-        {
+        {            
             //global scope
             var screenPixel = new Bitmap(1, 1);
 

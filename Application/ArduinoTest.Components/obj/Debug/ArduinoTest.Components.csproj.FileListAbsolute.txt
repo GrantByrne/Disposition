@@ -3,3 +3,11 @@ C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\bin\D
 C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\bin\Debug\ArduinoTest.Components.pdb
 C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\obj\Debug\ArduinoTest.Components.dll
 C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\obj\Debug\ArduinoTest.Components.pdb
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\bin\Debug\SharpDX.D3DCompiler.dll
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\bin\Debug\SharpDX.Direct3D11.dll
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\bin\Debug\SharpDX.dll
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\bin\Debug\SharpDX.DXGI.dll
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\bin\Debug\SharpDX.xml
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\bin\Debug\SharpDX.D3DCompiler.xml
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\bin\Debug\SharpDX.Direct3D11.xml
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\bin\Debug\SharpDX.DXGI.xml
