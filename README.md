@@ -14,7 +14,7 @@ Parts List
 - [Soldering Iron](http://www.amazon.com/Soldering-Station-Features-Continuously-Variable/dp/B0029N70WM/ref=sr_1_2?ie=UTF8&qid=1382397412&sr=8-2&keywords=soldering+iron)
 - [Solder](http://www.amazon.com/Amico-0-3mm-Rosin-Solder-Soldering/dp/B008DEYEAW/ref=sr_1_4?ie=UTF8&qid=1382397509&sr=8-4&keywords=rosin+solder)
 - Small Screwdriver (to take apart the Dioder Controller)
-- Wires/Jumers
+- Wires/Jumpers
 
 **Recommended Parts**
 - [Breadboard](http://www.amazon.com/microtivity-400-point-Experiment-Breadboard-Jumper/dp/B004RXKWDQ/ref=sr_1_3?ie=UTF8&qid=1382397570&sr=8-3&keywords=breadboard)
