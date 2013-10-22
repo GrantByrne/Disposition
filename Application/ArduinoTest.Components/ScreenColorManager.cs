@@ -37,7 +37,7 @@ namespace ArduinoTest.Components
                         gdest.ReleaseHdc();
                         gsrc.ReleaseHdc();
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
 
                     }

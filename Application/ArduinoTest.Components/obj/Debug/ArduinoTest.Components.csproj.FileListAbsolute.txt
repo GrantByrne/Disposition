@@ -11,3 +11,4 @@ C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\bin\D
 C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\bin\Debug\SharpDX.D3DCompiler.xml
 C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\bin\Debug\SharpDX.Direct3D11.xml
 C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\bin\Debug\SharpDX.DXGI.xml
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.Components\bin\Debug\SlimDX.dll

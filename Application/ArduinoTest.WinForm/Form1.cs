@@ -21,10 +21,13 @@ namespace ArduinoTest.WinForm
 
         private readonly IScreenColorManager _screenColorManager;
 
+        private readonly IScreenColor _screenColor;
+
         public Form1()
         {
             _arduinoConnection = new ArduinoConnection();
             _screenColorManager = new ScreenColorManager();
+            _screenColor = new ScreenColor();
 
             InitializeComponent();
 
@@ -59,13 +62,15 @@ namespace ArduinoTest.WinForm
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            var screenColor = _screenColorManager.GetCenterScreenColor();
+            //var screenColor = _screenColorManager.GetCenterScreenColor();
 
 
-            byte[] colors = new byte[3];
-            colors[0] = screenColor.Red;
-            colors[1] = screenColor.Green;
-            colors[2] = screenColor.Blue;
+            //byte[] colors = new byte[3];
+            //colors[0] = screenColor.Red;
+            //colors[1] = screenColor.Green;
+            //colors[2] = screenColor.Blue;
+
+            var colors = _screenColor.GetScreenColor();
 
             // Send it off to the arduino
             _arduinoConnection.Write(colors);

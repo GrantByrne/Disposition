@@ -9,3 +9,4 @@ C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.WinForm\obj\Debu
 C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.WinForm\obj\Debug\ArduinoTest.WinForm.csproj.GenerateResource.Cache
 C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.WinForm\obj\Debug\ArduinoTest.WinForm.exe
 C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.WinForm\obj\Debug\ArduinoTest.WinForm.pdb
+C:\Users\g\Documents\GitHub\Disposition\Application\ArduinoTest.WinForm\bin\Debug\SlimDX.dll
