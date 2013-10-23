@@ -23,7 +23,9 @@ Parts List
 Setting Up the Arduino
 ----------------------
 
-*Coming Soon!*
+1. Download the Arduino IDE: [Here](http://arduino.cc/en/Main/Software)
+2. Open up .\Arduino\disposition\disposition.ino in the Arduino IDE.
+3. Upload the Sketch to the Arduino
 
 Connecting the Arduino to the Dioder
 ------------------------------------
