@@ -15,7 +15,7 @@ namespace ArduinoTest.Components
         private static Bitmap _screenPixel = new Bitmap(1, 1);
 
         [DllImport("gdi32.dll", CharSet = CharSet.Auto, SetLastError = true, ExactSpelling = true)]
-        public static extern int BitBlt(IntPtr hDc, int x, int y, int nWidth, int nHeight, IntPtr hSrcDc, int xSrc, int ySrc, int dwRop);
+        private static extern int BitBlt(IntPtr hDc, int x, int y, int nWidth, int nHeight, IntPtr hSrcDc, int xSrc, int ySrc, int dwRop);
 
         /// <summary>
         /// Gets the color of the pixel at the center of the screen

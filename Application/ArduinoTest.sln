@@ -7,6 +7,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoTest.Components", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoTest.WinForm", "ArduinoTest.WinForm\ArduinoTest.WinForm.csproj", "{BCCF28D5-C26A-43D0-B46B-09DFF92DEFB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoTest.Wpf", "ArduinoTest.Wpf\ArduinoTest.Wpf.csproj", "{B30D9F8B-54D5-46A9-82EC-B855A9945BE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoTest.Test", "ArduinoTest.Test\ArduinoTest.Test.csproj", "{5418AEC7-AC62-4576-8DC3-483C6F23AF1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BB837E35-FD0C-44D8-98B7-04EB55AD10AA}"
+	ProjectSection(SolutionItems) = preProject
+		Performance1.psess = Performance1.psess
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +30,19 @@ Global
 		{BCCF28D5-C26A-43D0-B46B-09DFF92DEFB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCCF28D5-C26A-43D0-B46B-09DFF92DEFB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCCF28D5-C26A-43D0-B46B-09DFF92DEFB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B30D9F8B-54D5-46A9-82EC-B855A9945BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B30D9F8B-54D5-46A9-82EC-B855A9945BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B30D9F8B-54D5-46A9-82EC-B855A9945BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B30D9F8B-54D5-46A9-82EC-B855A9945BE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5418AEC7-AC62-4576-8DC3-483C6F23AF1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5418AEC7-AC62-4576-8DC3-483C6F23AF1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5418AEC7-AC62-4576-8DC3-483C6F23AF1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5418AEC7-AC62-4576-8DC3-483C6F23AF1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal

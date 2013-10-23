@@ -1,4 +1,5 @@
-﻿using SlimDX.Direct3D9;
+﻿using ArduinoTest.Components.ColorManagment.Abstract;
+using SlimDX.Direct3D9;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,12 @@ using System.Drawing;
 using SlimDX;
 using System.Collections.ObjectModel;
 
-namespace ArduinoTest.Components
+namespace ArduinoTest.Components.ColorManagment
 {
     /// <summary>
-    /// Gets the current screen color
+    /// Detects the average color of the screen using DirectX
     /// </summary>
-    public class ScreenColor : ArduinoTest.Components.IScreenColor
+    public class DirectxColorProvider : IColorProvider
     {
         /// <summary>
         /// Handles the graphics device
@@ -22,28 +23,32 @@ namespace ArduinoTest.Components
         private static Device d;
 
         /// <summary>
+        /// Holds a list of the points which the program will be getting 
+        /// the color data for
+        /// </summary>
+        private static Collection<long> colorPoints;
+        
+        /// <summary>
         /// Ctor
         /// </summary>
-        public ScreenColor()
+        public DirectxColorProvider()
         {
             PresentParameters present_params = new PresentParameters();
-            present_params.Windowed = true;
-            present_params.SwapEffect = SwapEffect.Discard;
             if (d == null)
             {
                 d = new Device(new Direct3D(), 0, DeviceType.Hardware, IntPtr.Zero, CreateFlags.SoftwareVertexProcessing, present_params);
             }
-
+            if (colorPoints == null)
+            {
+                colorPoints = GetColorPoints();
+            }
         }
 
-        private Surface CaptureScreen()
-        {
-            Surface s = Surface.CreateOffscreenPlain(d, Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height, Format.A8R8G8B8, Pool.Scratch);
-            d.GetFrontBufferData(0, s);
-            return s;
-        }
-
-        public byte[] GetScreenColor()
+        /// <summary>
+        /// Gets the average color of the screen
+        /// </summary>
+        /// <returns></returns>
+        public byte[] GetColors()
         {
             var color = new byte[4];
 
@@ -52,7 +57,6 @@ namespace ArduinoTest.Components
                 DataRectangle dr = screen.LockRectangle(LockFlags.None);
                 using (var gs = dr.Data)
                 {
-                    var colorPoints = GetColorPoints();
                     color = avcs(gs, colorPoints);
                 }
             }
@@ -60,6 +64,23 @@ namespace ArduinoTest.Components
             return color;
         }
 
+        /// <summary>
+        /// Gets the screen surface
+        /// </summary>
+        /// <returns></returns>
+        private Surface CaptureScreen()
+        {
+            Surface s = Surface.CreateOffscreenPlain(d, Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height, Format.A8R8G8B8, Pool.Scratch);
+            d.GetFrontBufferData(0, s);
+            return s;
+        }
+
+        /// <summary>
+        /// Averages the colors in the collection
+        /// </summary>
+        /// <param name="gs"></param>
+        /// <param name="positions"></param>
+        /// <returns></returns>
         private static byte[] avcs(DataStream gs, Collection<long> positions)
         {
             byte[] bu = new byte[4];
@@ -135,6 +156,12 @@ namespace ArduinoTest.Components
             public long Y { get; set; }
             public long Length { get; set; }
             public long Height { get; set; }
+        }
+
+
+        public byte[] GetProminentColor(Bitmap bitmap)
+        {
+            throw new NotImplementedException();
         }
     }
 }

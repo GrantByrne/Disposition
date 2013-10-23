@@ -32,7 +32,6 @@
             this.RedTextBox = new System.Windows.Forms.TextBox();
             this.BlueTextBox = new System.Windows.Forms.TextBox();
             this.GreenTextBox = new System.Windows.Forms.TextBox();
-            this.SetColorButton = new System.Windows.Forms.Button();
             this.RedLabel = new System.Windows.Forms.Label();
             this.BlueLabel = new System.Windows.Forms.Label();
             this.GreenLabel = new System.Windows.Forms.Label();
@@ -62,16 +61,6 @@
             this.GreenTextBox.Size = new System.Drawing.Size(100, 20);
             this.GreenTextBox.TabIndex = 2;
             this.GreenTextBox.Text = "255";
-            // 
-            // SetColorButton
-            // 
-            this.SetColorButton.Location = new System.Drawing.Point(12, 102);
-            this.SetColorButton.Name = "SetColorButton";
-            this.SetColorButton.Size = new System.Drawing.Size(75, 23);
-            this.SetColorButton.TabIndex = 3;
-            this.SetColorButton.Text = "Set Color";
-            this.SetColorButton.UseVisualStyleBackColor = true;
-            this.SetColorButton.Click += new System.EventHandler(this.SetColorButton_Click);
             // 
             // RedLabel
             // 
@@ -103,18 +92,16 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 25;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(215, 140);
+            this.ClientSize = new System.Drawing.Size(215, 93);
             this.Controls.Add(this.GreenLabel);
             this.Controls.Add(this.BlueLabel);
             this.Controls.Add(this.RedLabel);
-            this.Controls.Add(this.SetColorButton);
             this.Controls.Add(this.GreenTextBox);
             this.Controls.Add(this.BlueTextBox);
             this.Controls.Add(this.RedTextBox);
@@ -130,7 +117,6 @@
         private System.Windows.Forms.TextBox RedTextBox;
         private System.Windows.Forms.TextBox BlueTextBox;
         private System.Windows.Forms.TextBox GreenTextBox;
-        private System.Windows.Forms.Button SetColorButton;
         private System.Windows.Forms.Label RedLabel;
         private System.Windows.Forms.Label BlueLabel;
         private System.Windows.Forms.Label GreenLabel;

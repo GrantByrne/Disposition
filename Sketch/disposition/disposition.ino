@@ -15,9 +15,9 @@ int redPin = 5;      // The Pin that will be choosing the red color
 int greenPin = 3;    // The Pin that will be choosing the green color
 int bluePin = 11;     // The Pin that will be choosing the blue color
 
-byte redBrightness = 100;  // The value that will determine the brightness of the red color
-byte greenBrightness = 100; // The value that will determine the brightness of the green color
-byte blueBrightness = 100; // The value that will determine the brightenss of the blue color
+byte redBrightness = 255;  // The value that will determine the brightness of the red color
+byte greenBrightness = 255; // The value that will determine the brightness of the green color
+byte blueBrightness = 255; // The value that will determine the brightenss of the blue color
 
 int baudRate = 9600;
 
