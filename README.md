@@ -23,14 +23,21 @@ Parts List
 Setting Up the Arduino
 ----------------------
 
-*Coming Soon!*
+1. Download the Arduino IDE: [Here](http://arduino.cc/en/Main/Software)
+2. Open up .\Arduino\disposition\disposition.ino in the Arduino IDE.
+3. Upload the Sketch to the Arduino
 
 Connecting the Arduino to the Dioder
 ------------------------------------
 
 *Coming Soon!*
 
-Compiling the Program
----------------------
+Project Architecture
+--------------------
 
-*Coming Soon!*
+- **Application:** Contains all the code to Interface with the Arduino in Windows.
+  - **ArduinoTest.Components:** Contains the framework for interacting with the arduino and the screen.
+  - **ArduinoTest.Tests:** Houses the Unit/Integration/Performance tests for the project.
+  - **ArduinoTest.Winform:** Minor application that was used for initial testing of components. *Will Be Phased Out.*
+  - **ArduinoTest.Wpf:** Will contain the main application for using and configuring the system.
+- **Arduino:** Houses the Sketch for the ArduinoBoard.
