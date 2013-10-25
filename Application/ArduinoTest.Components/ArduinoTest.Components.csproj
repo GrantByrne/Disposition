@@ -84,13 +84,18 @@
     <Compile Include="Abstract\IScreenColorManager.cs" />
     <Compile Include="AmbiantLightingManager.cs" />
     <Compile Include="ArduinoConnection.cs" />
-    <Compile Include="ColorManagment\Abstract\IColorHelper.cs" />
-    <Compile Include="ColorManagment\Abstract\IColorProvider.cs" />
-    <Compile Include="ColorManagment\ColorHelper.cs" />
-    <Compile Include="ColorManagment\DirectxColorProvider.cs" />
-    <Compile Include="ColorManagment\GDIColorProvider.cs">
+    <Compile Include="ColorManagment\Mapper\Abstract\IColorMapper.cs" />
+    <Compile Include="ColorManagment\Mapper\ColorMapper.cs" />
+    <Compile Include="ColorManagment\Service\Abstract\IColorHelper.cs" />
+    <Compile Include="ColorManagment\Service\Abstract\IColorProvider.cs" />
+    <Compile Include="ColorManagment\Service\ColorHelper.cs" />
+    <Compile Include="ColorManagment\Service\DirectxColorProvider.cs" />
+    <Compile Include="ColorManagment\Service\GDIColorProvider.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ColorManagment\Service\Abstract\ISamplePointService.cs" />
+    <Compile Include="ColorManagment\Domain\SamplePoints.cs" />
+    <Compile Include="ColorManagment\Service\SamplePointService.cs" />
     <Compile Include="DioderConnection.cs" />
     <Compile Include="Domain\Color.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

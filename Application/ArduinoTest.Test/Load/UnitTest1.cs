@@ -2,8 +2,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
 using ArduinoTest.Components;
-using ArduinoTest.Components.ColorManagment.Abstract;
-using ArduinoTest.Components.ColorManagment;
+using ArduinoTest.Components.ColorManagment.Service.Abstract;
+using ArduinoTest.Components.ColorManagment.Service;
 
 namespace ArduinoTest.Test.Load
 {

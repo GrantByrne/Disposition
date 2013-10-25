@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <Choose>
@@ -53,10 +54,9 @@
   <ItemGroup>
     <Compile Include="Load\UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unit\ColorManagement\Service\SamplePointServiceTest.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Unit\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\ArduinoTest.Components\ArduinoTest.Components.csproj">
       <Project>{d207efa5-abe1-4f8a-894b-9912d7131d14}</Project>

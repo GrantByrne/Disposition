@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ArduinoTest.Components;
 using ArduinoTest.Components.Abstract;
-using ArduinoTest.Components.ColorManagment.Abstract;
-using ArduinoTest.Components.ColorManagment;
+using ArduinoTest.Components.ColorManagment.Service.Abstract;
+using ArduinoTest.Components.ColorManagment.Service;
 
 namespace ArduinoTest.WinForm
 {

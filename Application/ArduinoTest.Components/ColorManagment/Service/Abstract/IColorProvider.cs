@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArduinoTest.Components.ColorManagment.Abstract
+namespace ArduinoTest.Components.ColorManagment.Service.Abstract
 {
     /// <summary>
     /// Provides a base set of expected functionality for handling 
