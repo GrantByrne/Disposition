@@ -5,6 +5,12 @@ C#/Arduino interface for the IKEA Dioder to create mood lighting for the back of
 
 **Note: This project is currently in a semi-working state. Use at your own risk.**
 
+Eye Candy
+---------
+**Example of it handling a javascript rainbow transition**
+
+[![Rainbow Behind Monitor](http://img.youtube.com/vi/AczCC4aMguo/0.jpg)](http://www.youtube.com/watch?v=AczCC4aMguo)
+
 Parts List
 ----------
 
