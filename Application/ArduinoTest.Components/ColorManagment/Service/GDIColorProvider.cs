@@ -39,40 +39,29 @@ namespace ArduinoTest.Components.ColorManagment.Service
             IntPtr hDest = CreateCompatibleDC(hSrce);
             IntPtr hBmp = CreateCompatibleBitmap(hSrce, SamplePoints.CenterBox.Width*2, SamplePoints.CenterBox.Height*2);
             IntPtr hOldBmp = SelectObject(hDest, hBmp);
-            //bool b = BitBlt(hDest,
-            //                0,
-            //                0,
-            //                SamplePoints.CenterBox.Width*2,
-            //                SamplePoints.CenterBox.Height*2,
-            //                hSrce,
-            //                0,
-            //                0,
-            //                CopyPixelOperation.SourceCopy);
+            bool b = BitBlt(hDest,
+                            0,
+                            0,
+                            SamplePoints.CenterBox.Width * 2,
+                            SamplePoints.CenterBox.Height * 2,
+                            hSrce,
+                            0,
+                            0,
+                            CopyPixelOperation.SourceCopy);
 
-            //using (var bmp = Bitmap.FromHbitmap(hBmp))
-            //{
-            //    var colorsList = new List<Color>();
-            //    foreach (var point in SamplePoints.Points)
-            //    {
-
-            //        var pixel = bmp.GetPixel(point.X, point.Y);
-            //        var pixelColor = Color.FromArgb(pixel.R, pixel.G, pixel.B);
-            //        colorsList.Add(pixelColor);
-            //    }
-            //    var averagedColor = _colorHelper.ComputeAverageColors(colorsList);
-            //    colors = _colorMapper.Map(averagedColor);
-            //}
-            var colorsList = new List<Color>();
-            foreach(var point in SamplePoints.Points)
+            using (var bmp = Bitmap.FromHbitmap(hBmp))
             {
-                uint pixel = 0;
-                pixel = GetPixel(hSrce, Cursor.Position.X, Cursor.Position.Y);
-                Color color = Color.FromArgb((int) pixel);
-                colorsList.Add(color);
-            }
-            var averagedColor = _colorHelper.ComputeAverageColors(colorsList);
-            colors = _colorMapper.Map(averagedColor);
-            
+                var colorsList = new List<Color>();
+                foreach (var point in SamplePoints.Points)
+                {
+
+                    var pixel = bmp.GetPixel(point.X, point.Y);
+                    var pixelColor = Color.FromArgb(pixel.R, pixel.G, pixel.B);
+                    colorsList.Add(pixelColor);
+                }
+                var averagedColor = _colorHelper.ComputeAverageColors(colorsList);
+                colors = _colorMapper.Map(averagedColor);
+            }           
 
             SelectObject(hDest, hOldBmp);
             DeleteObject(hBmp);

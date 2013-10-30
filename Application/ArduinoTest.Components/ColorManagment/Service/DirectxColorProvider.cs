@@ -11,13 +11,14 @@ using System.Collections.ObjectModel;
 using ArduinoTest.Components.ColorManagment.Service.Abstract;
 using ArduinoTest.Components.ColorManagment.Mapper.Abstract;
 using ArduinoTest.Components.ColorManagment.Mapper;
+using System.Drawing.Printing;
 
 namespace ArduinoTest.Components.ColorManagment.Service
 {
     /// <summary>
     /// Detects the average color of the screen using DirectX
     /// </summary>
-    public class DirectxColorProvider : IColorProvider
+    public class DirectxColorProvider : Form, IColorProvider
     {
         private readonly IColorHelper _colorHelper;
         private readonly ISamplePointService _samplePointService;
@@ -46,9 +47,16 @@ namespace ArduinoTest.Components.ColorManagment.Service
             }
             if (_samplePoints == null)
             {
-                _samplePoints = _samplePointService.GetSamplePoints(.30f);
+                _samplePoints = _samplePointService.GetSamplePoints(.1f);
+            }
+
+            if(_graphics == null)
+            {
+                _graphics = this.CreateGraphics();
             }
         }
+
+        private static Graphics _graphics;
 
         /// <summary>
         /// Gets the average color of the screen
@@ -58,38 +66,40 @@ namespace ArduinoTest.Components.ColorManagment.Service
         {
             var color = new byte[3];
 
-            using (var screen = this.CaptureScreen())
+            using(var memoryImage = new Bitmap(_samplePoints.CenterBox.Width, _samplePoints.CenterBox.Height, _graphics))
             {
-                DataRectangle dr = screen.LockRectangle(LockFlags.None);
-                using (var gs = dr.Data)
+                using (Graphics memoryGraphics = Graphics.FromImage(memoryImage))
                 {
+                    var size = new System.Drawing.Size
+                    {
+                        Width = _samplePoints.CenterBox.Width,
+                        Height = _samplePoints.CenterBox.Height
+                    };
+
+                    memoryGraphics.CopyFromScreen(_samplePoints.CenterBox.X,
+                                                    _samplePoints.CenterBox.Y,
+                                                    0,
+                                                    0,
+                                                    size,
+                                                    CopyPixelOperation.SourceCopy);
+
+
                     var colors = new List<Color>();
                     foreach (var point in _samplePoints.Points)
                     {
-                        const int bpp = 4;
-                        gs.Position = point.X * point.Y * bpp;
-                        var bu = new byte[4];
-                        gs.Read(bu, 0, 4);
-                        colors.Add(Color.FromArgb(bu[2], bu[1], bu[0]));
+                        var pixel = memoryImage.GetPixel(point.X - _samplePoints.CenterBox.X, point.Y - _samplePoints.CenterBox.Y);
+                        var sampledColor = Color.FromArgb(pixel.R, pixel.G, pixel.B);
+                        colors.Add(sampledColor);
                     }
                     var averageColor = _colorHelper.ComputeAverageColors(colors);
                     color = _colorMapper.Map(averageColor);
-                }
+
+                }                    
+                
             }
+            
 
             return color;
         }
-
-        /// <summary>
-        /// Gets the screen surface
-        /// </summary>
-        /// <returns></returns>
-        private Surface CaptureScreen()
-        {
-            Surface s = Surface.CreateOffscreenPlain(d, Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height, Format.A8R8G8B8, Pool.Scratch);
-            d.GetBackBuffer(0, 0);
-            return s;
-        }
-
     }
 }
